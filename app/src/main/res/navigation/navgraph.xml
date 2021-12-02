@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navgraph"
+    app:startDestination="@id/mainlist3">
+
+    <fragment
+        android:id="@+id/mainlist3"
+        android:name="com.example.passgenerator.Data.List.Mainlist"
+        android:label="fragment_mainlist"
+        tools:layout="@layout/fragment_mainlist" >
+        <action
+            android:id="@+id/action_mainlist3_to_addpassword3"
+            app:destination="@id/addpassword3" />
+        <action
+            android:id="@+id/action_mainlist3_to_updatepassword3"
+            app:destination="@id/updatepassword3" />
+    </fragment>
+    <fragment
+        android:id="@+id/addpassword3"
+        android:name="com.example.passgenerator.Data.Add.Addpassword"
+        android:label="fragment_addpassword"
+        tools:layout="@layout/fragment_addpassword" >
+        <action
+            android:id="@+id/action_addpassword3_to_mainlist3"
+            app:destination="@id/mainlist3" />
+    </fragment>
+    <fragment
+        android:id="@+id/updatepassword3"
+        android:name="com.example.passgenerator.Data.Update.updatepassword"
+        android:label="fragment_updatepassword"
+        tools:layout="@layout/fragment_updatepassword" >
+        <action
+            android:id="@+id/action_updatepassword3_to_mainlist3"
+            app:destination="@id/mainlist3" />
+        <argument
+            android:name="currentitem"
+            app:argType="com.example.passgenerator.Data.UserPass" />
+    </fragment>
+</navigation>
